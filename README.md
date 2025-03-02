@@ -63,5 +63,5 @@ Este proyecto es una aplicación web desarrollada con Flask que simula el lanzam
 
 ## Contacto
 
-Si tienes preguntas o sugerencias, contáctame en tu-email\@example.com.
+Si tienes preguntas o sugerencias, contáctame 
 

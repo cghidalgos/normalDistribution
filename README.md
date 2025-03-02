@@ -61,7 +61,7 @@ Este proyecto es una aplicación web desarrollada con Flask que simula el lanzam
 - Visualizar gráficos generados con los datos acumulados.
 - Reiniciar los datos globales si se desea.
 
-## Contacto
+## Desarrollado
 
-Si tienes preguntas o sugerencias, contáctame 
+- Brayan Diaz Valencia - GHS
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Probabilidad de la Suma de los Dados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Probabilidad de la Suma de los Dados</h1>
+        
+        <div class="mt-4">
+            <h2>Total de lanzamientos de todos los usuarios: {{ acumulador }}</h2>
+            <h3>Total de lanzamientos individuales: {{ total_lanzamientos }}</h3>
+        </div>
+        
+        <form method="POST" class="mt-4">
+            <div class="form-group">
+                <label for="numero">Número deseado (suma de los dados):</label>
+                <input type="number" id="numero" name="numero" min="2" max="12" required class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Calcular Probabilidad</button>
+        </form>
+        
+        {% if probabilidad is not none %}
+            <div class="mt-4">
+                <h2>Probabilidad de obtener una suma de {{ numero }}: {{ probabilidad }}</h2>
+                <h3>Gráfica de Probabilidades</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ grafico_url }}" alt="Gráfica de Probabilidades" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='/img.jpeg') }}" alt="Imagen relacionada" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        
+        <div class="mt-4">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary btn-block">Volver a la página principal</a>
+        </div>
+
+        <form method="POST" class="mt-4">
+            <input type="hidden" name="reset_global" value="true">
+            <button type="submit" class="btn btn-danger btn-block">Reiniciar contador global</button>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

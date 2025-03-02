@@ -1,0 +1,7 @@
+Flask
+Flask-Session
+plotly
+numpy
+scipy
+Gunicorn
+kaleido
